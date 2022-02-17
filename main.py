@@ -101,6 +101,7 @@ def main(wf):
     return
 
   search_term = query[1] if len(query) == 1 else ' '.join(query[1:])
+  search_term = search_term.decode('utf-8')
   cards_response = get_cards(search_term, user_token)
   is_denied_due_to_auth = cards_response.status_code == 401
   if (is_denied_due_to_auth):
@@ -113,7 +114,7 @@ def main(wf):
   is_no_card_found = len(cards) == 0
   if (is_no_card_found):
     wf.add_item(
-      title='No cards found for "' + query + '"',
+      title='No cards found for "' + search_term + '"',
       valid=False
     )
     wf.send_feedback()
