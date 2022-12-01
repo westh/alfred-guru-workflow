@@ -7,7 +7,7 @@ To get started you first have to:
 1. Set your email, which you can do by running `gu > set email <your email>`
 2. Set password or token, which you can do by running `gu > set password <your password>` or `gu > set token <your token>`
 
-After this you can simply type `gu {some word}` in Alfred, and there you go.
+After this you can simply type `gu <some word>` in Alfred, and there you go.
 
 ![gu](example.png)
 
